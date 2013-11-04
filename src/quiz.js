@@ -11,16 +11,11 @@ var quiz = {};
 // You can sleep in if it is not a weekday or if you are on vacation.
 // quiz.sleepIn() => false
 // quiz.sleepIn({vacation: true}) => true
-quiz.sleepIn = function(vacation, day) {
-  var day = this.day;
-  var vacation = this.vacation;
-  if (vacation === true) {
-    return true;
-  } else if (day === 'Saturday' || day === 'Sunday') { 
-    return true;
-  } else {
-    return false;  
-  }
+quiz.sleepIn = function(options) {
+  options || (options = {vacation: false});
+  var day = new Date();
+  day = day.getDay();
+  return (day === 6 || day === 0 || options.vacation);
 };
 
 // Question 2: function called nearHundred

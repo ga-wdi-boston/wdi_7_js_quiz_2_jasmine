@@ -14,17 +14,12 @@ describe('question1', function() {
 
   it('returns true if today is saturday or sunday', function() {
     // Assuming you're taking this on a weekday!
-    expect(quiz.sleepIn(false, 'Saturday')).toBeTruthy;
-    expect(quiz.sleepIn(false, 'Sunday')).toBeTruthy;
-    expect(quiz.sleepIn(false, 'Wednesday')).toBeFalsy;
+    expect(quiz.sleepIn()).toBe(false);
   });
 
-  it('returns true if you are on vacation', function() {
-    expect(quiz.sleepIn(true, 'Sunday')).toBeTruthy;
-    expect(quiz.sleepIn(true, 'Tuesday')).toBeTruthy;  
+  it('returns true if an options hash is passed with vacation set to true', function() {
+    expect(quiz.sleepIn({vacation: true})).toBe(true);
   });
-
-});
 
 // Write the next tests yourself!
 // See quiz.js for more details
@@ -42,5 +37,13 @@ describe('question2', function() {
     expect(quiz.nearHundred(99)).toBeTruthy;
     expect(quiz.nearHundred(52)).toBeFlasy;
   });
+});
 
+describe('question3', function() {
+   it('returns true if the number is between 90 and 99', function() {
+    expect(quiz.missingChar(91)).toBeTruthy;
+    expect(quiz.missingChar(99)).toBeTruthy;
+    expect(quiz.missingChar('')).toBeFlasy;
+  });
+});
 });
