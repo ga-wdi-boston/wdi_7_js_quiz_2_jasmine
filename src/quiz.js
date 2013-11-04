@@ -4,7 +4,8 @@
 //      |  |     |   __   | |  |     \   \       |  |     \   \         /  /_\  \      |  |  |  |   |  |  |  | |  |    /  /
 //      |  |     |  |  |  | |  | .----)   |      |  | .----)   |       /  _____  \     |  `--'  '--.|  `--'  | |  |   /  /----.__
 //      |__|     |__|  |__| |__| |_______/       |__| |_______/       /__/     \__\     \_____\_____\\______/  |__|  /________(__)
-var quiz = {};
+var quiz = function() {
+};
 
 // Question 1: a function called sleepIn
 //////////////
@@ -12,6 +13,11 @@ var quiz = {};
 // quiz.sleepIn() => false
 // quiz.sleepIn({vacation: true}) => true
 quiz.sleepIn = function(options) {
+	if options === ('saturday' || 'sunday') {
+		return true;
+	}
+	else return false;
+	}
 }
 
 // Question 2: function called nearHundred
