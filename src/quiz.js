@@ -12,8 +12,31 @@ var quiz = {};
 // quiz.sleepIn() => false
 // quiz.sleepIn({vacation: true}) => true
 quiz.sleepIn = function(options) {
-}
+	var d = new Date();
+	var n = d.getDay;
+	// var vacation = options[vacation];
 
+	if (n === 0 && n === 1 )
+	{
+		return true;
+  }
+	// else if (options[vacation] === true)
+	// {
+	// 	return true;
+	// }
+	else
+	{
+		return false;
+	}
+};
+
+
+
+  // it('returns true if an options hash is passed with vacation set to true', function() {
+  //   expect(quiz.sleepIn({vacation: true})).toBe(true);
+  // });
+
+// });
 // Question 2: function called nearHundred
 //////////////
 // If the number is between 90 and 99, the result is true;
