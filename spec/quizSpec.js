@@ -54,6 +54,14 @@ describe('question3', function() {
 
 });
 
+describe('question4', function() {
+
+  it('should remove del from a string', function() {
+    expect(quiz.delDel("delaware")).toBe("aware");
+  });
+
+});
+
 
 
 // Write the next tests yourself!

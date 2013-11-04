@@ -49,14 +49,11 @@ quiz.missingChar = function(string, index) {
 	}
 };
 
+quiz.delDel = function(string) {
+	var string = string;
+	return string.replace("del","");
+}
 
-
-// Question 3: a function called missingChar
-//////////////
-// Remove the character that corresponds to the index from the string.
-// If you don't enter a string
-// quiz.missingChar("kittie", 1) => "kttie"
-// quiz.missingChar(347, 1) => Error: Please enter a string!
 
 // Question 4: a function called delDel
 //////////////
