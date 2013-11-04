@@ -13,10 +13,7 @@ var quiz = {};
 // quiz.sleepIn({vacation: true}) => true
 quiz.sleepIn = function(options) {
   var current_date = new Date(), today = current_date.getDay();
-
-  if (today === 'Saturday' || today === 'Sunday' || options === { vacation: true }) {
-    return true;
-  }
+  return today === 0 || today === 6 || (options.hasOwnProperty('vacation') && options['vacation'] === true);
   return false;
 }
 
