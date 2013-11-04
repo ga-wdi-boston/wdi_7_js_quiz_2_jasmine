@@ -12,6 +12,12 @@ var quiz = {};
 // quiz.sleepIn() => false
 // quiz.sleepIn({vacation: true}) => true
 quiz.sleepIn = function(options) {
+  var current_date = new Date(), today = current_date.getDay();
+
+  if (today === 'Saturday' || today === 'Sunday' || options === { vacation: true }) {
+    return true;
+  }
+  return false;
 }
 
 // Question 2: function called nearHundred
