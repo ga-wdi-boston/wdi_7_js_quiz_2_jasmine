@@ -46,4 +46,13 @@ describe('question3', function() {
     expect(quiz.missingChar('')).toBe('Please enter a string');
   });
 });
+
+describe('question4', function() {
+  it('removes del from a string', function () {
+    expect(quiz.delDel('abdelcd')).toBe('abcd');
+    expect(quiz.delDel('bendel winter')).toBe('ben winter');
+    expect(quiz.delDel('football')).toBe('football');
+  });
+});
+
 });
