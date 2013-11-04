@@ -4,18 +4,39 @@
 //      |  |     |   __   | |  |     \   \       |  |     \   \         /  /_\  \      |  |  |  |   |  |  |  | |  |    /  /
 //      |  |     |  |  |  | |  | .----)   |      |  | .----)   |       /  _____  \     |  `--'  '--.|  `--'  | |  |   /  /----.__
 //      |__|     |__|  |__| |__| |_______/       |__| |_______/       /__/     \__\     \_____\_____\\______/  |__|  /________(__)
+'use strict';
+
 var quiz = {};
 
 // Question 1: a function called sleepIn
 //////////////
 // You can sleep in if it is not a weekday or if you are on vacation.
-// quiz.sleepIn() => false
-// quiz.sleepIn({vacation: true}) => true
+
 quiz.sleepIn = function(options) {
-}
+	if (options === {vacation: true}) {
+    return true;
+	}
+	else {
+    return false;
+	}
+  // quiz.sleepIn({vacation: true}) => true;
+};
 
 // Question 2: function called nearHundred
 //////////////
+quiz.nearHundred = function(number) {
+  if (typeof number === 'number') {
+    if (number <= 90 || number >= 100) {
+      return false;
+    }
+    else if (number >= 90 && number <= 99) {
+      return true;
+    }
+  }
+  else {
+    throw new Error('Please enter a number!');
+  }
+};
 // If the number is between 90 and 99, the result is true;
 // If it is 89 or below, it is false.
 // quiz.nearHundred(52) => false
