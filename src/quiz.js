@@ -12,7 +12,12 @@ var quiz = {};
 // quiz.sleepIn() => false
 // quiz.sleepIn({vacation: true}) => true
 quiz.sleepIn = function(options) {
-}
+  this.options = options
+  if (options === ('saturday' || 'sunday' || 'vacation')
+    return true
+  else 
+    return false;
+},
 
 // Question 2: function called nearHundred
 //////////////
@@ -21,7 +26,13 @@ quiz.sleepIn = function(options) {
 // quiz.nearHundred(52) => false
 // quiz.nearHundred(93) => true
 // quiz.nearHundred('two') => Error: Please enter a number!
-
+quiz.nearHundred = function(number) 
+  this.number = number
+  if (number > 89 && number < 100)
+    return true
+  else if (number <= 89 || number > 100)
+    return false;
+} 
 // Question 3: a function called missingChar
 //////////////
 // Remove the character that corresponds to the index from the string.
