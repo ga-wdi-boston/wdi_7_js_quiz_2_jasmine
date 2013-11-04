@@ -33,17 +33,17 @@ describe('question2', function() {
   });
 
   it('returns true if the number is between 90 and 99', function() {
-    expect(quiz.nearHundred(91)).toBeTruthy;
-    expect(quiz.nearHundred(99)).toBeTruthy;
-    expect(quiz.nearHundred(52)).toBeFlasy;
+    expect(quiz.nearHundred(91)).toBe(true);
+    expect(quiz.nearHundred(99)).toBe(true);
+    expect(quiz.nearHundred(52)).toBe(false);
   });
 });
 
 describe('question3', function() {
-   it('returns true if the number is between 90 and 99', function() {
-    expect(quiz.missingChar(91)).toBeTruthy;
-    expect(quiz.missingChar(99)).toBeTruthy;
-    expect(quiz.missingChar('')).toBeFlasy;
+   it('returns value with missing character removed', function() {
+    expect(quiz.missingChar('dog', 1)).toBe('dg');
+    expect(quiz.missingChar('hello ben', 2)).toBe('helo ben');
+    expect(quiz.missingChar('')).toBe('Please enter a string');
   });
 });
 });

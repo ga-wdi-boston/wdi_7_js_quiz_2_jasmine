@@ -26,7 +26,7 @@ quiz.sleepIn = function(options) {
 // quiz.nearHundred(93) => true
 // quiz.nearHundred('two') => Error: Please enter a number!
 quiz.nearHundred = function(num) {
-  var num = this.num
+  var num = num
   if (isNaN(num) === true) {
     return "Please enter a number";
   } else if (num > 89 && num < 100) {
@@ -45,10 +45,10 @@ quiz.nearHundred = function(num) {
 // quiz.missingChar(347, 1) => Error: Please enter a string!
 
 quiz.missingChar = function(string, index) {
-  var string = this.string;
-  var index = this.index;
+  var string = string;
+  var index = index;
   if (string === "") {
-    return "Please enter a string";
+    return 'Please enter a string';
   } else if (index > string.length-1) {
     return string;
   } else {
