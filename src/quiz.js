@@ -64,10 +64,15 @@ quiz.missingChar = function(string, index) {
 quiz.delDel = function(string) {
   var string = string;
   return string.replace(/del/gi, "");
-}
+};
 
 // Question 5: a method called backAround
 //////////////
 // Given a string, move the last character to the beginning.
 // "cat".backAround() => "tca"
 // "hello".backAround() => "ohell"
+
+quiz.backAround = function(string) {
+  var last = string[string.length-1];
+  return last + string.substr(0, string.length-1);
+};

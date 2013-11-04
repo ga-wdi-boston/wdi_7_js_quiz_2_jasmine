@@ -10,6 +10,7 @@
 // The first question's tests are written.
 // See quiz.js for more details
 
+
 describe('question1', function() {
 
   it('returns true if today is saturday or sunday', function() {
@@ -20,6 +21,7 @@ describe('question1', function() {
   it('returns true if an options hash is passed with vacation set to true', function() {
     expect(quiz.sleepIn({vacation: true})).toBe(true);
   });
+});
 
 // Write the next tests yourself!
 // See quiz.js for more details
@@ -55,4 +57,11 @@ describe('question4', function() {
   });
 });
 
+describe('question5', function() {
+  it('puts last character to the beginning', function () {
+    expect(quiz.backAround('football')).toBe('lfootbal');
+    expect(quiz.backAround('ben winter')).toBe('rben winte');
+    expect(quiz.backAround('shirt')).toBe('tshir');
+  });
 });
+
