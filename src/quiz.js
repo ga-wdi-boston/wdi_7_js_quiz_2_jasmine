@@ -6,16 +6,17 @@
 //      |__|     |__|  |__| |__| |_______/       |__| |_______/       /__/     \__\     \_____\_____\\______/  |__|  /________(__)
 var quiz = {};
 
-// Question 1: a function called sleepIn
+Question 1: a function called sleepIn
 //////////////
-// You can sleep in if it is not a weekday or if you are on vacation.
-// quiz.sleepIn() => false
-// quiz.sleepIn({vacation: true}) => true
+You can sleep in if it is not a weekday or if you are on vacation.
+quiz.sleepIn() => false
+quiz.sleepIn({vacation: true}) => true
 quiz.sleepIn = function(options) {
+
 }
 
 // Question 2: function called nearHundred
-//////////////
+// ////////////
 // If the number is between 90 and 99, the result is true;
 // If it is 89 or below, it is false.
 // quiz.nearHundred(52) => false
