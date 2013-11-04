@@ -35,9 +35,16 @@ describe('question2', function() {
   });
 
   it ('throws an error if the input is not an integer', function() {
-    expect(quiz.nearHundred('two')).toThrow('Error: Please enter a number!');
+    expect(quiz.nearHundred('two')).toThrow('Please enter a number!');
   });
 });
 
-// Write the next tests yourself!
-// See quiz.js for more details
+describe ('question3', function() {
+  it ('removes the character that corresponds to the index from the string', function() {
+    expect(quiz.missingChar('kittie', 1)).toBe 'kttie';
+  });
+
+  it ('throws an error if the entered input is not a string', function() {
+    expect(quiz.missingChar(347, 1)).toThrow 'Please enter a string!';
+  });
+});
