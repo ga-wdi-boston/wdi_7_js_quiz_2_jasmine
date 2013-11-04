@@ -9,35 +9,64 @@
 
 // The first question's tests are written.
 // See quiz.js for more details
+// describe('a quiz', function() {
 
-// describe('question1', function() {
-
-//   it('returns true if today is saturday or sunday', function() {
-//     // Assuming you're taking this on a weekday!
-//     expect(quiz.sleepIn()).toBe(false);
-//   });
-
-//   it('returns true if an options hash is passed with vacation set to true', function() {
-//     expect(quiz.sleepIn({vacation: true})).toBe(true);
+//   it('is about JavaScript and testing with Jasmine', function() {
+//     expect(QUIZ_TOPICS).toContain('jasmine');
+//     expect(QUIZ_TOPICS).toContain('javascript');
 //   });
 
 // });
 
-describe('question2', function() {
 
-  it('returns true if number is between 90 and 99', function() {
+describe('question1', function() {
+
+  it('returns true if today is saturday or sunday', function() {
     // Assuming you're taking this on a weekday!
-    expect(quiz.nearHundred(91)).toBe(true);
+    expect(quiz.sleepIn()).toBe(false);
   });
 
-  it('returns false if a number is under 90', function() {
-    expect(quiz.nearHundred(88)).toBe(false);
-  });
-
-  it('returns an error is a non-number is entered', function() {
-    expect(quiz.nearHundred("cat")).toBe("Error: Please enter a number!");
+  it('returns true if an options hash is passed with vacation set to true', function() {
+    expect(quiz.sleepIn({vacation: true})).toBe(true);
   });
 
 });
-// Write the next tests yourself!
-// See quiz.js for more details
+
+describe('question2', function() {
+  it('returns true if the number is between 90 and 99', function() {
+    expect(quiz.near_hundred(99)).toBe(true);
+  });
+  it('returns false if the number is not between 90 and 99', function() {
+    expect(quiz.near_hundred(89)).toBe(false);
+  });
+  it('returns and error when given a non-number', function() {
+    expect(function(){ quiz.near_hundred("89") }).toThrow(new Error("Please enter a number!"));
+  });
+});
+
+describe('question3', function() {
+  it('returns with removed char', function() {
+    expect(quiz.missingChar("kittie", 1)).toBe("kttie");
+    expect(quiz.missingChar("doggie", 1)).toBe("dggie");
+  });
+  it('returns an error when passed a number as a string', function() {
+    expect(function() {quiz.missingChar(42, 1)}).toThrow(new Error("Please enter a string!"));
+  });
+});
+
+describe('question4', function() {
+  it('returns altered string when it has abcd', function() {
+    expect(quiz.delDel("abdelcd")).toBe("abcd");
+  });
+
+  it('returns an unaltered string when it doesnt have del in it', function() {
+    expect(quiz.delDel("whatever")).toBe("whatever");
+  });
+});
+
+describe('question5', function() {
+  it('returns altered strings', function() {
+    expect(quiz.backAround("cat")).toBe("tca");
+    expect(quiz.backAround("hello")).toBe("ohell");
+  });
+});
