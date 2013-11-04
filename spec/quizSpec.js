@@ -25,3 +25,23 @@ describe('question1', function() {
 
 // Write the next tests yourself!
 // See quiz.js for more details
+
+// describe('question2', function() {
+
+
+//  it('returns true if number is between 90 and 99', function() {
+
+//  	expect(quiz.nearHundred()).toBe(true) {
+//  		if (quiz.nearHundred >= 90 && quiz.nearHundred <= 99) {
+//  	});
+//  });
+
+//  it('returns false if number is 89 or below', function() {
+
+// expect(quiz.nearHundred())
+
+//  });
+
+
+
+// });
