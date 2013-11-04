@@ -35,16 +35,17 @@ describe('question2', function() {
   });
 
   it ('throws an error if the input is not an integer', function() {
-    expect(quiz.nearHundred('two')).toThrow('Please enter a number!');
+    expect(function() {quiz.nearHundred('two');}).toThrow('Please enter a number!');
   });
 });
 
+
 describe ('question3', function() {
   it ('removes the character that corresponds to the index from the string', function() {
-    expect(quiz.missingChar('kittie', 1)).toBe 'kttie';
+    expect(quiz.missingChar('kittie', 1)).toBe('kttie');
   });
 
   it ('throws an error if the entered input is not a string', function() {
-    expect(quiz.missingChar(347, 1)).toThrow 'Please enter a string!';
+    expect(function() {quiz.missingChar(347, 1);}).toThrow('Please enter a string!');
   });
 });

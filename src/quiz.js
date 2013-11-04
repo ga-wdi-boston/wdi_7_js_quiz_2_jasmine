@@ -12,13 +12,11 @@ var quiz = {};
 //////////////
 // You can sleep in if it is not a weekday or if you are on vacation.
 
-quiz.sleepIn = function(vacation) {
-	if (vacation === true) {
-    return true;
-	}
-	else {
-    return false;
-	}
+quiz.sleepIn = function(options) {
+	options || (options = {vacation: false});
+	var day = new Date();
+	day = day.getDay();
+	return (day === 0 || day === 6 || options.vacation);
   // quiz.sleepIn({vacation: true}) => true;
 };
 
@@ -52,8 +50,13 @@ quiz.nearHundred = function(number) {
 // quiz.missingChar(347, 1) => Error: Please enter a string!
 
 quiz.missingChar = function(string, index) {
-	
-}
+  if (typeof string === 'string') {
+    // string[index];
+  }
+  else {
+    throw new Error('Please enter a string!');
+  }
+};
 
 // Question 4: a function called delDel
 //////////////
