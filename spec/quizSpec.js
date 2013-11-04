@@ -23,5 +23,18 @@ describe('question1', function() {
 
 });
 
+describe('question2', function() {
+
+  it('returns true is number is between 90 and 99', function() {
+    // Assuming you're taking this on a weekday!
+    expect(quiz.nearHundred(88)).toBe(false);
+  });
+
+  it('returns false is the number is below 89', function() {
+    expect(quiz.nearHundred(98)).toBe(true);
+  });
+
+});
+
 // Write the next tests yourself!
 // See quiz.js for more details
