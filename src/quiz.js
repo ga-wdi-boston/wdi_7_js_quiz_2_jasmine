@@ -12,7 +12,18 @@ var quiz = {};
 // quiz.sleepIn() => false
 // quiz.sleepIn({vacation: true}) => true
 quiz.sleepIn = function(options) {
-}
+	if (options === "Sunday"){
+		return true
+	},
+	else 
+		if (options === "Saturday") {
+			return true
+		},
+		else {
+			return false
+			}
+		}
+};
 
 // Question 2: function called nearHundred
 //////////////
@@ -21,6 +32,11 @@ quiz.sleepIn = function(options) {
 // quiz.nearHundred(52) => false
 // quiz.nearHundred(93) => true
 // quiz.nearHundred('two') => Error: Please enter a number!
+
+// quiz.nearHundred = function(options) {
+
+// }
+
 
 // Question 3: a function called missingChar
 //////////////
