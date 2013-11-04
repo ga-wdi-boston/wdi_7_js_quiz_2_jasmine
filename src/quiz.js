@@ -13,39 +13,36 @@ var quiz = {};
 // quiz.sleepIn({vacation: true}) => true
 
 quiz.sleepIn = function(options) {
+	options || (options = {vacation: false})
 	var date = new Date();
 	var day = date.getDay();
-	// if day === 6 | 0 && options['vacation'];
+	return (day === 0 || day === 6 || options.vacation );
 };
 
 quiz.nearHundred = function(number) {
-	if (number > 89) {
-		return true;
+	if (typeof(number) === 'number' ) {
+		return (number <= 99 && number >= 90);
 	} else {
-		return false;
-	}
-}
-// Question 2: function called nearHundred
-//////////////
-// If the number is between 90 and 99, the result is true;
-// If it is 89 or below, it is false.
-// quiz.nearHundred(52) => false
-// quiz.nearHundred(93) => true
-// quiz.nearHundred('two') => Error: Please enter a number!
+			throw new Error('Please enter a number');
+		};
+};
 
-// Question 3: a function called missingChar
-//////////////
-// Remove the character that corresponds to the index from the string.
-// If you don't enter a string
-// quiz.missingChar("kittie", 1) => "kttie"
-// quiz.missingChar(347, 1) => Error: Please enter a string!
+quiz.missingChar = function(a_string, index) {
+	if (typeof(a_string) === 'string' ) {
+		return a_string.substring(0, index) + a_string.substring(index + 1);
+	} else {
+		throw new Error('Please enter a string');
+	};
+};
 
-// Question 4: a function called delDel
-//////////////
-// Remove "del" from a string.
-// quiz.delDel("abdelcd") => "abcd"
-// quiz.delDel("xyz") => "xyz"
+quiz.delDel = function(a_string) {
+	return a_string.replace(/del/gi, '');
+};
 
+quiz.backAround = function(string) {
+	var last = string[string.length - 1];
+	return last + string.substring(0, string.length - 1);
+};
 // Question 5: a method called backAround
 //////////////
 // Given a string, move the last character to the beginning.
