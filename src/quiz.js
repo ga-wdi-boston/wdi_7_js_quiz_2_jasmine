@@ -11,9 +11,20 @@ var quiz = {};
 // You can sleep in if it is not a weekday or if you are on vacation.
 // quiz.sleepIn() => false
 // quiz.sleepIn({vacation: true}) => true
-quiz.sleepIn = function(options) {
-}
 
+quiz.sleepIn = function(options) {
+	var date = new Date();
+	var day = date.getDay();
+	// if day === 6 | 0 && options['vacation'];
+};
+
+quiz.nearHundred = function(number) {
+	if (number > 89) {
+		return true;
+	} else {
+		return false;
+	}
+}
 // Question 2: function called nearHundred
 //////////////
 // If the number is between 90 and 99, the result is true;
