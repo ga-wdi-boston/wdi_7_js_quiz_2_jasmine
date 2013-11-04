@@ -1,0 +1,100 @@
+//      ___       _______      ___       __  .__   __.  ______    __
+//     /   \     /  _____|    /   \     |  | |  \ |  | |      \  |  |
+//    /  ^  \   |  |  __     /  ^  \    |  | |   \|  | `----)  | |  |
+//   /  /_\  \  |  | |_ |   /  /_\  \   |  | |  . `  |     /  /  |  |
+//  /  _____  \ |  |__| |  /  _____  \  |  | |  |\   |    |__|   |__|
+// /__/     \__\ \______| /__/     \__\ |__| |__| \__|     __    (__)
+//                                                        (__)
+// http://pivotal.github.io/jasmine/
+
+// The first question's tests are written.
+// See quiz.js for more details
+describe('a quiz', function() {
+
+  it('is about JavaScript and testing with Jasmine', function() {
+    expect(QUIZ_TOPICS).toContain('jasmine');
+    expect(QUIZ_TOPICS).toContain('javascript');
+  });
+
+});
+
+describe('question1', function() {
+
+  it('returns true if today is saturday or sunday', function() {
+    // Assuming you're taking this on a weekday!
+    expect(quiz.sleepIn()).toBe(false);
+  });
+
+  it('returns true if an options hash is passed with vacation set to true', function() {
+    expect(quiz.sleepIn({vacation: true})).toBe(true);
+  });
+
+});
+
+describe('question2', function() {
+  it('returns true if the number is within 10 of 100', function() {
+    expect(quiz.nearHundred(97)).toEqual(true);
+  });
+
+  it('returns false if the number is not within 10 of 100', function() {
+    expect(quiz.nearHundred(89)).toEqual(false);
+  });
+
+  it('returns an error if a non-number is passed in for the first parameter', function() {
+    expect( function() { quiz.nearHundred('Right'); }).toThrow(new Error("Please enter a number!"));
+  });
+});
+
+describe('question3', function() {
+  it('removes a character from the word at the spot chosen', function() {
+    expect(quiz.missingChar("kitten", 1)).toEqual("ktten");
+  });
+
+  it('removes the character only at the spot chosen', function() {
+    expect(quiz.missingChar("tater tots", 0)).toEqual("ater tots");
+  });
+
+  it('removes nothing if the spot chosen is outside the string', function() {
+    expect(quiz.delDel("xyz", 7)).toEqual("xyz");
+  });
+
+  it('returns false if a non-string is passed in for the first parameter', function() {
+    expect(quiz.delDel(367, 1)).toEqual(false);
+  });
+});
+
+describe('question4', function() {
+  it('removes an instance of del in a string', function() {
+    expect(quiz.delDel("abdelcd")).toEqual("abcd");
+  });
+
+  it('removes all instances of del in a string', function() {
+    expect(quiz.delDel("adelbdelcdeldef")).toEqual("abcdef");
+  });
+
+  it('removes nothing if a string without del is passed in', function() {
+    expect(quiz.delDel("xyz")).toEqual("xyz");
+  });
+
+  it('returns false if a non-string is passed in', function() {
+    expect(quiz.delDel(367)).toEqual(false);
+  });
+});
+
+
+describe('question5', function() {
+  it('returns tca if cat is passed in', function() {
+    var word = "cat";
+    expect(word.backAround()).toEqual("tca");
+  });
+
+  it('returns ohell if hello is passed in', function() {
+    var word = "hello";
+    expect(word.backAround()).toEqual("ohell");
+  });
+
+  it('doesn\'t work on numbers', function() {
+    var reverse = 367;
+    expect(function(){ reverse.backAround() }).toThrow(new Error("Object 367 has no method 'backAround'"));
+  });
+});
