@@ -71,6 +71,15 @@ quiz.delDel = function(string) {
   return string.replace(/del/, '');
 };
 
+
+quiz.backAround = function(string) {
+
+
+var last = string.charAt(string.length-1); 
+return (last + string.substr(0, string.length-1)); 
+
+};
+
 // Question 5: a method called backAround
 //////////////
 // Given a string, move the last character to the beginning.

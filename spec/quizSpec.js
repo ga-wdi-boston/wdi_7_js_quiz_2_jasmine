@@ -59,3 +59,13 @@ describe ('question4', function() {
     expect(quiz.delDel("xyz")).toBe("xyz");
   });
 });
+
+describe ('question5', function() {
+	it ('moves the last character to the beginning', function() {
+    expect(quiz.backAround("cat")).toBe("tca");
+	});
+
+	it ('moves the last character to teh beginning', function() {
+    expect(quiz.backAround("hello")).toBe("ohell");
+	});
+});
