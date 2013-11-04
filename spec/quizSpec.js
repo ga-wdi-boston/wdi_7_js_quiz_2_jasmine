@@ -23,5 +23,21 @@ describe('question1', function() {
 
 });
 
+describe('question2', function() {
+
+  it('returns true if the number is between 90 and 99', function() {
+    expect(quiz.nearHundred(97)).toBe(true);
+    expect(quiz.nearHundred(90)).toBe(true);
+  });
+  it('returns false if the number is not between 90 and 99', function() {
+    expect(quiz.nearHundred(89)).toBe(false);
+    expect(quiz.nearHundred(100)).toBe(false);
+  });
+  it('returns an error when given a nonnumber', function() {
+    expect(function() { quiz.nearHundred('frog') }).toThrow(new Error("Please enter a number"));
+  });
+});
+
+
 // Write the next tests yourself!
 // See quiz.js for more details
