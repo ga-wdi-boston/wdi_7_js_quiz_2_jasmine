@@ -12,8 +12,8 @@ var quiz = {};
 //////////////
 // You can sleep in if it is not a weekday or if you are on vacation.
 
-quiz.sleepIn = function(options) {
-	if (options === {vacation: true}) {
+quiz.sleepIn = function(vacation) {
+	if (vacation === true) {
     return true;
 	}
 	else {
@@ -25,14 +25,15 @@ quiz.sleepIn = function(options) {
 // Question 2: function called nearHundred
 //////////////
 quiz.nearHundred = function(number) {
-  if (typeof number === 'number') {
-    if (number <= 90 || number >= 100) {
-      return false;
-    }
-    else if (number >= 90 && number <= 99) {
+    
+  if (typeof number === 'number' && number >= 90 && number <= 99) {
       return true;
-    }
   }
+
+  else if (typeof number === 'number' && number <= 90 || number >= 100) {
+      return false;
+  }
+
   else {
     throw new Error('Please enter a number!');
   }
