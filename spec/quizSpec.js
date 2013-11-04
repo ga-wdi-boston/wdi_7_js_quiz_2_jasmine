@@ -49,3 +49,13 @@ describe ('question3', function() {
     expect(function() {quiz.missingChar(347, 1);}).toThrow('Please enter a string!');
   });
 });
+
+describe ('question4', function() {
+  it ('removes \'del\' from a string', function() {
+    expect(quiz.delDel("abdelcd")).toBe("abcd");
+  });
+
+  it ('removes nothing from strings that do not contain \'del\'', function() {
+    expect(quiz.delDel("xyz")).toBe("xyz");
+  });
+});

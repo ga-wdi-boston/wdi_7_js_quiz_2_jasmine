@@ -51,7 +51,10 @@ quiz.nearHundred = function(number) {
 
 quiz.missingChar = function(string, index) {
   if (typeof string === 'string') {
-    // string[index];
+    var last = string.length;
+    var first_part = string.slice(0, index);
+    var second_part = string.slice((index + 1), last);
+    return first_part + second_part;
   }
   else {
     throw new Error('Please enter a string!');
@@ -63,6 +66,10 @@ quiz.missingChar = function(string, index) {
 // Remove "del" from a string.
 // quiz.delDel("abdelcd") => "abcd"
 // quiz.delDel("xyz") => "xyz"
+
+quiz.delDel = function(string) {
+  return string.replace(/del/, '');
+};
 
 // Question 5: a method called backAround
 //////////////
