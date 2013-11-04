@@ -4,15 +4,18 @@
 //      |  |     |   __   | |  |     \   \       |  |     \   \         /  /_\  \      |  |  |  |   |  |  |  | |  |    /  /
 //      |  |     |  |  |  | |  | .----)   |      |  | .----)   |       /  _____  \     |  `--'  '--.|  `--'  | |  |   /  /----.__
 //      |__|     |__|  |__| |__| |_______/       |__| |_______/       /__/     \__\     \_____\_____\\______/  |__|  /________(__)
-var quiz = {};
+var quiz = {
 
 // Question 1: a function called sleepIn
 //////////////
-// You can sleep in if it is not a weekday or if you are on vacation.
-// quiz.sleepIn() => false
-// quiz.sleepIn({vacation: true}) => true
+//You can sleep in if it is not a weekday or if you are on vacation.
+
 quiz.sleepIn = function(options) {
-}
+	if Saturday;
+	quiz.sleepIn() => false
+	quiz.sleepIn({vacation: true}) => true
+};
+
 
 // Question 2: function called nearHundred
 //////////////
