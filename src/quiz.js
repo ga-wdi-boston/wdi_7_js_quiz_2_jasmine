@@ -16,14 +16,10 @@ quiz.sleepIn = function(options) {
 	var n = d.getDay;
 	// var vacation = options[vacation];
 
-	if (n === 0 && n === 1 )
+	if (n === 0 || n === 6)
 	{
 		return true;
   }
-	// else if (options[vacation] === true)
-	// {
-	// 	return true;
-	// }
 	else
 	{
 		return false;
