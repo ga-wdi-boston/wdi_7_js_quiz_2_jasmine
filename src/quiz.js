@@ -12,7 +12,12 @@ var quiz = {};
 // quiz.sleepIn() => false
 // quiz.sleepIn({vacation: true}) => true
 quiz.sleepIn = function(options) {
-}
+  this.options = options;
+  return false;
+  if (this.options = {vacation: true}){
+    return true;
+  }
+};
 
 // Question 2: function called nearHundred
 //////////////
@@ -21,6 +26,15 @@ quiz.sleepIn = function(options) {
 // quiz.nearHundred(52) => false
 // quiz.nearHundred(93) => true
 // quiz.nearHundred('two') => Error: Please enter a number!
+quiz.nearHundred = function(number) {
+  this.number = number;
+  if (this.number >= 90 && this.number <= 99){
+    return true
+  }
+  if (this.number <= 89){
+    return false
+  }
+};
 
 // Question 3: a function called missingChar
 //////////////
@@ -28,6 +42,9 @@ quiz.sleepIn = function(options) {
 // If you don't enter a string
 // quiz.missingChar("kittie", 1) => "kttie"
 // quiz.missingChar(347, 1) => Error: Please enter a string!
+quiz.missingChar = function() {
+
+};
 
 // Question 4: a function called delDel
 //////////////
