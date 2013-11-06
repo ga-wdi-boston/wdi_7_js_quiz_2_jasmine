@@ -38,6 +38,9 @@ quiz.nearHundred = function(number) {
 // If you don't enter a string
 // quiz.missingChar("kittie", 1) => "kttie"
 // quiz.missingChar(347, 1) => Error: Please enter a string!
+quiz.missingChar = function(a_string, index) {
+  
+}
 
 // Question 4: a function called delDel
 //////////////
