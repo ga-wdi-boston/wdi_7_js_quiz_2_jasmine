@@ -56,4 +56,14 @@ describe('question3: missingChar', function(){
   });
 });
 
+describe('question4: delDel', function(){
+
+  it('removes all instances of del from the string', function(){
+    expect(quiz.delDel("abdelcdabdelcd")).toEqual("abcdabcd")
+  });
+
+  it('removes all instances of del from the string', function(){
+    expect(quiz.delDel("xyz")).toEqual("xyz")
+  });
+});
 

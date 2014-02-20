@@ -55,7 +55,9 @@ quiz.missingChar = function (string, index) {
 // Remove "del" from a string.
 // quiz.delDel("abdelcd") => "abcd"
 // quiz.delDel("xyz") => "xyz"
-
+quiz.delDel = function (string) {
+  return string.split("del").join("");
+};
 // Question 5: a method called backAround
 //////////////
 // Given a string, move the last character to the beginning.
