@@ -1,15 +1,15 @@
-# This is a quiz on JavaScript and writing tests!
+# JavaScript Jasmine Quiz
 
-Please see `src/quiz.js` and `spec/quizSpec.js`.
+
+
+Please see `src/Quiz.js` and `spec/QuizSpec.js`.
 
 The first tests for the first question are already written.
 COOL!
 
-Write the corresponding code.
+Write the corresponding code. You may reference your *Ruby* solutions and things online, but you may **not** reference your JavaScript quiz from yesterday. 
 
 To run your tests open `SpecRunner.html`.
 
 For the remaining questions write __both__ the tests and functions.
 AGAIN?!
-
-__Please replace this line with your name.__
