@@ -46,6 +46,11 @@ quiz.sleepIn = function(options) {
 // quiz.missingChar("kittie", 1) => "kttie"
 // quiz.missingChar(347, 1) => Error: Please enter a string!
 
+var missingChar = function(string) {
+
+
+}
+
 // Question 4: a function called delDel
 //////////////
 // Remove "del" from a string.
