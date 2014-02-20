@@ -57,14 +57,15 @@ describe('question4', function(){
   it('should return origional string if it does not has del', function(){
     expect(quiz.delDel('xyz')).toEqual('xyz');
   });
-  
-})
 
+});
 
-
-
-
-
+describe('question5', function(){
+  it('should return a new array', function(){
+    expect(quiz.backAround('cat')).toEqual('tca');
+    expect(quiz.backAround('hello')).toEqual('ohell');
+  });
+}); 
 
 
 
