@@ -20,7 +20,12 @@ describe('question1', function() {
   it('returns true if an options hash is passed with vacation set to true', function() {
     expect(quiz.sleepIn({vacation: true})).toBe(true);
   });
+});
 
+describe('question2', function() {
+  it('returns false if the number is 89 or below', function() {
+    expect(quiz.nearHundred(52)).toBe(false);
+  });
 });
 
 // Write the next tests yourself!

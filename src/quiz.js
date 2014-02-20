@@ -20,7 +20,8 @@ quiz.sleepIn = function(options) {
   } else {
     return false;
   };
-}
+};
+
 
 // Question 2: function called nearHundred
 //////////////
@@ -29,7 +30,15 @@ quiz.sleepIn = function(options) {
 // quiz.nearHundred(52) => false
 // quiz.nearHundred(93) => true
 // quiz.nearHundred('two') => Error: Please enter a number!
-
+quiz.nearHundred = function(number) {
+  if (typeof number !== "number") {
+    throw new Error("please enter a number");
+  } else if (number < 100 && number > 89) {
+    return true;
+  } else {
+    return false;
+  };
+};
 // Question 3: a function called missingChar
 //////////////
 // Remove the character that corresponds to the index from the string.
