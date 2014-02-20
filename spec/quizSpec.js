@@ -34,8 +34,9 @@ describe('question2', function() {
   });
 
   it('returns an error if no number is provided', function() {
-    expect(quiz.nearHundred('dfsdfsd')).toThrow(new Error('Please enter a number!'));
+    expect(function() {quiz.nearHundred('dfsdfsd')}).toThrow(new Error('Please enter a number!'));
   });
+  //expect(function() {myFunctionToTest(invalidParamter)}).toThrow()
 
 });
 
@@ -48,7 +49,7 @@ describe('question3', function() {
   });
 
   it('returns an error if no string is provided', function() {
-    expect(quiz.missingChar(343, 3432)).toThrow(new Error('Please enter a string!'));
+    expect(function() {quiz.missingChar(5434, 3434)}).toThrow(new Error('Please enter a string!'));
   });
 
 });
