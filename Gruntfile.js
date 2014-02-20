@@ -19,7 +19,7 @@ module.exports = function(grunt) {
         ],
         options: {
           specs: 'spec/*Spec.js',
-          keepRunner : true
+          keepRunner : false
         }
       }
     }
