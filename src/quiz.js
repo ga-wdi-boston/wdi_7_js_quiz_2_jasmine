@@ -11,8 +11,19 @@ var quiz = {};
 // You can sleep in if it is not a weekday or if you are on vacation.
 // quiz.sleepIn() => false
 // quiz.sleepIn({vacation: true}) => true
-quiz.sleepIn = function(options) {
+quiz.sleepIn = function(day, vacation) {
+  var day = new Date().getDay(),
+  var vacation = false
+  if(vacation === true) {
+    return true;
+  }
+  if(day > 0 || day < 6 ) {
+      return false;
+  } else {
+    return true;
+  }
 }
+console.log("Can i sleep in today?" + " " + quiz.sleepIn());
 
 // Question 2: function called nearHundred
 //////////////
@@ -21,13 +32,27 @@ quiz.sleepIn = function(options) {
 // quiz.nearHundred(52) => false
 // quiz.nearHundred(93) => true
 // quiz.nearHundred('two') => Error: Please enter a number!
-
+quiz.nearHundred = function(n) {
+  if(typeof n !== "number"){
+    throw new Error("Please enter a number");
+  }
+  return (n > 90) && (n < 100);
+};
 // Question 3: a function called missingChar
 //////////////
 // Remove the character that corresponds to the index from the string.
 // If you don't enter a string
 // quiz.missingChar("kittie", 1) => "kttie"
 // quiz.missingChar(347, 1) => Error: Please enter a string!
+quiz.missingChar = function(string, index) {
+  var new_string;
+  if(typeof string !== "string") {
+    throw new Error("please enter a string y'all");
+  }
+  var letters = string.split('');
+  letters.splice(index, 1);
+  return letters.join('');
+};
 
 // Question 4: a function called delDel
 //////////////
