@@ -1,0 +1,10 @@
+ jasmine: {
+            components: {
+              src: [
+              'src/*js'
+              ],
+              options: {
+                specs: 'spec/*Spec.js',
+                keepRunner : true
+              }
+            }
