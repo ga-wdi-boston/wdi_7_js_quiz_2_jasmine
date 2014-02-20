@@ -29,7 +29,17 @@ describe('question1', function() {
 describe('question2', function(){
 
   it('returns true if the num is between 90 and 99 inclusive', function(){
-    expect(quiz.nearHundred()).toEqual(true)
+    expect(quiz.nearHundred(91)).toEqual(true)
+  });
+
+  it('returns false if the num is less than 90', function(){
+    expect(quiz.nearHundred(50)).toEqual(false)
+  });
+
+  it('throws an error if the argument is not a number', function(){
+    expect(function(){
+      quiz.nearHundred('bananas')
+    }).toThrowError("Error: Please enter a number!")
   });
 });
 

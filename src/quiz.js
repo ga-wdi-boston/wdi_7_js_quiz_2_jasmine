@@ -26,7 +26,13 @@ quiz.sleepIn = function(options) {
 // quiz.nearHundred(52) => false
 // quiz.nearHundred(93) => true
 // quiz.nearHundred('two') => Error: Please enter a number!
-
+quiz.nearHundred = function (num) {
+  if ( typeof num !== 'number' ) {
+    throw new Error ("Error: Please enter a number!");
+  } else {
+    return num > 89 && num < 100;
+  }
+};
 // Question 3: a function called missingChar
 //////////////
 // Remove the character that corresponds to the index from the string.
