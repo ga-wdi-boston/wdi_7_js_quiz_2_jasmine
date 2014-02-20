@@ -26,6 +26,9 @@ describe('question2', function() {
   it('returns false if the number is 89 or below', function() {
     expect(quiz.nearHundred(52)).toBe(false);
   });
+  it('returns true if the number is between 90 and 99', function() {
+    expect(quiz.nearHundred(93)).toBe(true);
+  });
 });
 
 // Write the next tests yourself!
