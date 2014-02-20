@@ -36,5 +36,10 @@ describe('question2', function() {
   });
 });
 
+describe('question3', function() {
+  it('removes the character corresponding to the index from the string', function() {
+    expect(quiz.missingChar("kittie", 1)).toEqual("kttie");
+  })
+});
 // Write the next tests yourself!
 // See quiz.js for more details

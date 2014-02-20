@@ -45,7 +45,11 @@ quiz.nearHundred = function(number) {
 // If you don't enter a string
 // quiz.missingChar("kittie", 1) => "kttie"
 // quiz.missingChar(347, 1) => Error: Please enter a string!
-
+quiz.missingChar = function(string, index) {
+  var array = string.split("");
+  array.splice(index, 1);
+  return array.join("");
+};
 // Question 4: a function called delDel
 //////////////
 // Remove "del" from a string.
