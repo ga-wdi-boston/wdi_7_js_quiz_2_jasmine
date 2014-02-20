@@ -12,7 +12,15 @@ var quiz = {};
 // quiz.sleepIn() => false
 // quiz.sleepIn({vacation: true}) => true
 quiz.sleepIn = function(options) {
-}
+	options || (options = {} )
+	var day = new Date().getDay();
+	if (day === 0 || day === 6 || options.vacation) {
+		return true;
+	}
+	else {
+		return false;
+	}
+};
 
 // Question 2: function called nearHundred
 //////////////
@@ -22,12 +30,37 @@ quiz.sleepIn = function(options) {
 // quiz.nearHundred(93) => true
 // quiz.nearHundred('two') => Error: Please enter a number!
 
+
+quiz.nearHundred = function(number) {
+	if ((number > 89) && (number < 100)) {
+		return true;
+	}
+	else {
+		return false;
+	}
+};
+
 // Question 3: a function called missingChar
 //////////////
 // Remove the character that corresponds to the index from the string.
 // If you don't enter a string
 // quiz.missingChar("kittie", 1) => "kttie"
 // quiz.missingChar(347, 1) => Error: Please enter a string!
+
+quiz.missingChar = function(my_str, index) {
+	if (typeof my_str === "string"){
+		splice1 = my_str.substr(0, (index))
+		splice2 = my_str.substr(index + 1, my_str.length)
+		splice3 = splice1 +""+ splice2;
+		return (splice3);
+	}
+	else {
+		return ("Error: Please enter a string!");
+	}
+
+}
+
+
 
 // Question 4: a function called delDel
 //////////////
@@ -40,3 +73,18 @@ quiz.sleepIn = function(options) {
 // Given a string, move the last character to the beginning.
 // "cat".backAround() => "tca"
 // "hello".backAround() => "ohell"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
