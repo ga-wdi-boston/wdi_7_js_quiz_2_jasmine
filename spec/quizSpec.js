@@ -29,6 +29,11 @@ describe('question2', function() {
   it('returns true if the number is between 90 and 99', function() {
     expect(quiz.nearHundred(93)).toBe(true);
   });
+  it('throws an error if a number is not entered', function() {
+    expect(function() {
+      quiz.nearHundred('fifty');
+    }).toThrowError("please enter a number");
+  });
 });
 
 // Write the next tests yourself!
