@@ -71,7 +71,7 @@ quiz.missingChar = function(string, index){
 // quiz.delDel("xyz") => "xyz"
 
 quiz.delDel = function(string){
-  return string.split('del').join();
+  return string.split('del').join('');
 }
 
 // Question 5: a method called backAround
