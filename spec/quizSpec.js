@@ -43,6 +43,17 @@ describe('question2', function(){
   });
 });
 
+describe('question3: missingChar', function(){
 
+  it('removes the character that corresponds to the index from the string', function(){
+    expect(quiz.missingChar("kittie", 1)).toEqual("kttie")
+  });
+
+  it('throws an error if the first argument is not a string', function(){
+    expect(function(){
+      quiz.missingChar(347, 1)
+    }).toThrowError("Error: Please enter a string!")
+  });
+});
 
 
