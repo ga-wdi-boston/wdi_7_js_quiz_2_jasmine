@@ -25,3 +25,14 @@ describe('question1', function() {
 
 // Write the next tests yourself!
 // See quiz.js for more details
+
+describe('question2', function(){
+
+  it('returns true if the num is between 90 and 99 inclusive', function(){
+    expect(quiz.nearHundred()).toEqual(true)
+  });
+});
+
+
+
+
