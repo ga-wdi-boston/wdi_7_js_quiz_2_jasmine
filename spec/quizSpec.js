@@ -11,11 +11,10 @@
 // See quiz.js for more details
 
 describe('question1', function() {
-  var quiz;
 
-  it('returns true if today is saturday or sunday', function(day) {
+  it('returns true if today is saturday or sunday', function() {
     // Assuming you're taking this on a weekday!
-    expect(quiz.sleepIn(day)).toBe(false);
+    expect(quiz.sleepIn()).toBe(false);
   });
 
   it('returns true if an options hash is passed with vacation set to true', function() {
@@ -25,18 +24,15 @@ describe('question1', function() {
 });
 
 describe('question2', function() {
-  var quiz;
-
-  it('returns true if number is near 100 (90-99)', function(n) {
+  it('returns true if number is near 100 (90-99)', function() {
     expect(quiz.nearHundred(94)).toBe(true);
   });
-
-  it('returns false if number is not neer 100 (<90, >100)', function(n) {
+  it('returns false if number is not near 100 (<90, >100)', function(n) {
     expect(quiz.nearHundred(2)).toBe(false);
   });
   it('throws an error if a valid number is not entered', function() {
-    quiz.nearHundred('ninety-four');
-  }).toThrowError('Not a real number. Enter digits, not letters.');
+    expect(function() { quiz.nearHundred('two') }).toThrowError('Error: Please enter a number')
+  });
 });
 
 
