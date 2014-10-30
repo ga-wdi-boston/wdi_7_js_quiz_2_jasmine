@@ -71,3 +71,10 @@ quiz.delDel = function(string) {
 // Given a string, move the last character to the beginning.
 // "cat".backAround() => "tca"
 // "hello".backAround() => "ohell"
+
+String.prototype.backAround = function() {
+  var characters = this.split('');
+  var finalCharacter = characters.pop();
+  characters.unshift(finalCharacter);
+  return characters.join('');
+}

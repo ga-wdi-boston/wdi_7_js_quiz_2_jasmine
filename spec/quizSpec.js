@@ -53,3 +53,10 @@ describe('question4', function() {
     expect(quiz.delDel("xyz")).toMatch('xyz');
   });
 });
+
+describe('question5', function() {
+  it("move the last character to the beginning", function() {
+    expect("cat".backAround()).toMatch("tca");
+    expect("hello".backAround()).toMatch('ohell');
+  });
+});
