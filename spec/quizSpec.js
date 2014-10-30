@@ -37,3 +37,12 @@ describe('question2', function() {
     expect(quiz.nearHundred(52)).toBeFalsy();
   });
 });
+
+describe('question3', function() {
+  it("removes the character at string[index]", function() {
+    expect(quiz.missingChar("kittie", 1)).toMatch("kttie");
+  });
+  it("throws an error if the input is not a string", function() {
+    expect(quiz.missingChar.bind(null, 347, 1)).toThrow();
+  });
+});
