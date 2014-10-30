@@ -46,3 +46,10 @@ describe('question3', function() {
     expect(quiz.missingChar.bind(null, 347, 1)).toThrow();
   });
 });
+
+describe('question4', function() {
+  it("removes 'del' from a string", function() {
+    expect(quiz.delDel("abdelcd")).toMatch("abcd");
+    expect(quiz.delDel("xyz")).toMatch('xyz');
+  });
+});

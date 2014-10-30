@@ -62,6 +62,10 @@ quiz.missingChar = function(string, index) {
 // quiz.delDel("abdelcd") => "abcd"
 // quiz.delDel("xyz") => "xyz"
 
+quiz.delDel = function(string) {
+  return string.replace(/del/, '');
+}
+
 // Question 5: a method called backAround
 //////////////
 // Given a string, move the last character to the beginning.
