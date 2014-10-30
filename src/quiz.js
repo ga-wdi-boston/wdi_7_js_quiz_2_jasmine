@@ -12,6 +12,10 @@ var quiz = {};
 // quiz.sleepIn() => false
 // quiz.sleepIn({vacation: true}) => true
 quiz.sleepIn = function(options) {
+  if (options && options.vacation) {
+    return true;
+  }
+  return false;
 }
 
 // Question 2: function called nearHundred
